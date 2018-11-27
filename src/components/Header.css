@@ -1,0 +1,9 @@
+.header {
+  height: 70px;
+  width: 100vw;
+  color: #ff6347;
+}
+
+.header h1 {
+  margin-left: 30px;
+}
