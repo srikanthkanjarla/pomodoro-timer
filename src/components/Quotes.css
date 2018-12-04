@@ -1,0 +1,47 @@
+.quote {
+    flex: 1 1 auto;
+    width: 25%;
+    color: #2c3d55;
+    box-shadow: 0 0 1px 1px rgb(160, 227, 219);
+    border-radius: 15px;
+    text-align: center;
+    margin: 10px;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.quote p {
+    padding: 0 20px;
+    font-size: 23px;
+    font-family: 'Text Me One', sans-serif;
+}
+
+.quote p:before,
+.quote p:after {
+    content: "\201c";
+    color: rgb(255, 99, 71);
+    padding: 0 10px;
+    font-size: 50px;
+    font-weight: bold;
+    font-family: auto;
+    display: block;
+    text-align: left;
+}
+
+.quote p:after {
+    content: "\201d";
+    text-align: right;
+}
+
+@media (min-width: 320px) and (max-width: 480px) {
+    .quote {
+        width: 100%;
+    }
+    .quote p {
+        padding: 0 10px;
+        font-size: 18px;
+        margin: 0;
+    }
+}
