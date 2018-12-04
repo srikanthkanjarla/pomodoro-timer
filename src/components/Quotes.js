@@ -10,7 +10,7 @@ function Quotes(props) {
 
   return (
     <div className="quote" style={isBreakTime ? quoteStyle : {}}>
-      <p>{isBreakTime ? "It's ok to take a break" : quoteText}</p>
+      {isBreakTime ? <h2>It&apos;s ok to take a break</h2> : <p>{quoteText}</p>}
     </div>
   );
 }
