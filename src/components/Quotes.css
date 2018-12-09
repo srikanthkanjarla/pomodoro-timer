@@ -10,12 +10,12 @@
     flex-flow: column nowrap;
     justify-content: center;
     align-items: center;
+    font-family: "Text Me One", sans-serif;
 }
 
 .quote p {
     padding: 0 20px;
     font-size: 23px;
-    font-family: 'Text Me One', sans-serif;
 }
 
 .quote p:before,
@@ -28,6 +28,7 @@
     font-family: auto;
     display: block;
     text-align: left;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 .quote p:after {
@@ -38,10 +39,17 @@
 @media (min-width: 320px) and (max-width: 480px) {
     .quote {
         width: 100%;
+        margin: 0 10px;
     }
     .quote p {
-        padding: 0 10px;
+        padding: 0;
         font-size: 18px;
         margin: 0;
+    }
+    .quote p:before,
+    .quote p:after {
+        font-size: 25px;
+        padding: 0 5px;
+        margin: 10px 0 0 0;
     }
 }

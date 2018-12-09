@@ -1,77 +1,78 @@
 .timer-settings {
-    flex: 1 1 25%;
-    box-shadow: 0 0 1px 1px rgb(255, 255, 0);
-    padding: 40px 0;
-    border-radius: 15px;
-    margin: 10px;
+  flex: 1 1 25%;
+  box-shadow: 0 0 1px 1px rgb(255, 255, 0);
+  padding: 40px 0;
+  border-radius: 15px;
+  margin: 10px;
 }
 
 .timer-settings h2 {
-    text-align: center;
-    margin: 0 0 40px 0;
+  text-align: center;
+  margin: 0 0 40px 0;
 }
 
 .timer-settings label {
-    display: flex;
-    justify-content: space-between;
-    padding: 0 50px;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 50px;
 }
 
 .timer-settings input[type="number"] {
-    width: 40px;
-    padding: 5px;
-    margin: 5px;
-    box-shadow: 0 0 1px 1px rgb(255, 99, 71);
-    border-radius: 3px;
-    border: 0;
-    font-size: 16px;
+  width: 40px;
+  padding: 5px;
+  margin: 5px;
+  box-shadow: 0 0 1px 1px rgb(255, 99, 71);
+  border-radius: 3px;
+  border: 0;
+  font-size: 16px;
 }
 
 .timer-settings input[type="number"]:focus {
-    box-shadow: 0 0 2px 2px rgb(255, 99, 71);
-    outline: 0;
+  box-shadow: 0 0 2px 2px rgb(255, 99, 71);
+  outline: 0;
 }
 
 .timer-settings input[type="checkbox"] {
-    display: none;
+  display: none;
 }
 
 .timer-settings span {
-    width: 25px;
-    margin: 5px;
-    box-shadow: 0 0 1px 1px rgb(255, 99, 71);
-    border-radius: 3px;
-    height: 25px;
-    cursor: pointer;
-    position: relative;
+  width: 25px;
+  margin: 5px;
+  box-shadow: 0 0 1px 1px rgb(255, 99, 71);
+  border-radius: 3px;
+  height: 25px;
+  cursor: pointer;
+  position: relative;
+  background-color: #ffffff;
 }
 
 .timer-settings span:hover {
-    box-shadow: 0 0 2px 2px rgb(255, 99, 71);
+  box-shadow: 0 0 2px 2px rgb(255, 99, 71);
 }
 
-.timer-settings input[type="checkbox"]:checked+span::before {
-    content: "";
-    position: absolute;
-    border-left: 3px solid #119da4;
-    border-bottom: 3px solid #119da4;
-    width: 15px;
-    height: 5px;
-    top: 6px;
-    left: 4px;
-    -webkit-transform: rotate(80deg);
-    transform: rotate(315deg);
+.timer-settings input[type="checkbox"]:checked + span::before {
+  content: "";
+  position: absolute;
+  border-left: 3px solid #2c3d55;
+  border-bottom: 3px solid #2c3d55;
+  width: 15px;
+  height: 5px;
+  top: 6px;
+  left: 4px;
+  -webkit-transform: rotate(80deg);
+  transform: rotate(315deg);
 }
 
 @media (min-width: 320px) and (max-width: 480px) {
-    .timer-settings {
-        width: 100%;
-        padding: 20px 0;
-        box-shadow: none;
-    }
-    .timer-settings h2 {
-        text-align: left;
-        margin-left: 20px;
-        font-size: 18px;
-    }
+  .timer-settings {
+    width: 100%;
+    padding: 15px 0;
+    box-shadow: none;
+  }
+  .timer-settings h2 {
+    text-align: left;
+    margin-left: 20px;
+    font-size: 18px;
+  }
 }
