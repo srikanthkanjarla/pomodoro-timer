@@ -12,4 +12,8 @@ body {
     flex-flow: row wrap;
 }
 
-@media (min-width: 320px) and (max-width: 480px) {}
+@media (min-width: 320px) and (max-width: 480px) {
+    body {
+        background-color: #ffffff;
+    }
+}
