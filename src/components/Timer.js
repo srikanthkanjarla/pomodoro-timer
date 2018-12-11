@@ -22,13 +22,15 @@ function PomodoroTimer(props) {
         {elapsedSeconds < 10 ? `0${elapsedSeconds}` : elapsedSeconds}
       </div>
       <br />
-      <Button
-        name="start"
-        value={isTimerRunning ? 'Pause' : 'Start'}
-        className={isTimerRunning ? 'btn btn-stop' : 'btn btn-start'}
-        onClick={onStartTimer}
-      />
-      <Button name="reset" value="Reset" className="btn btn-reset" onClick={onResetTimer} />
+      <div className="btn-controls">
+        <Button
+          name="start"
+          value={isTimerRunning ? 'Pause' : 'Start'}
+          className={isTimerRunning ? 'btn btn-stop' : 'btn btn-start'}
+          onClick={onStartTimer}
+        />
+        <Button name="reset" value="Reset" className="btn btn-reset" onClick={onResetTimer} />
+      </div>
     </div>
   );
 }

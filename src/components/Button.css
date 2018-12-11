@@ -1,48 +1,49 @@
 .btn {
-  padding: 10px 25px;
-  margin: 10px;
-  outline: none;
-  border-radius: 8px;
-  border: 1px solid transparent;
-  cursor: pointer;
-  transition: all 2ms ease;
-  font-size: 18px;
-  font-family: "Roboto", sans-serif;
-  background-color: #e5e5e5;
+    padding: 10px 0;
+    min-width: 90px;
+    margin: 10px;
+    outline: none;
+    border-radius: 8px;
+    border: 1px solid transparent;
+    cursor: pointer;
+    transition: all 2ms ease;
+    font-size: 18px;
+    font-family: "Roboto", sans-serif;
+    background-color: #e5e5e5;
 }
 
 .btn-start {
-  box-shadow: 0 0 1px 1px #6dc9dd;
+    box-shadow: 0 0 1px 1px #6dc9dd;
 }
 
 .btn-start:hover {
-  box-shadow: 0 0 2px 2px #6dc9dd;
+    box-shadow: 0 0 2px 2px #6dc9dd;
 }
 
 .btn-start:active {
-  background: linear-gradient(#f4f3ea, #6dc9dd);
+    background: linear-gradient(#f4f3ea, #6dc9dd);
 }
 
 .btn-stop {
-  box-shadow: 0 0 1px 1px #d36582;
+    box-shadow: 0 0 1px 1px #d36582;
 }
 
 .btn-stop:hover {
-  box-shadow: 0 0 2px 2px #d35682;
+    box-shadow: 0 0 2px 2px #d35682;
 }
 
 .btn-stop:active {
-  background: linear-gradient(#f4f3ea, #d36582);
+    background: linear-gradient(#f4f3ea, #d36582);
 }
 
 .btn-reset {
-  box-shadow: 0 0 1px 1px #b8cdf8;
+    box-shadow: 0 0 1px 1px #b8cdf8;
 }
 
 .btn-reset:hover {
-  box-shadow: 0 0 2px 2px #b8cdf8;
+    box-shadow: 0 0 2px 2px #b8cdf8;
 }
 
 .btn-reset:active {
-  background: linear-gradient(#f4f3ea, #becdf8);
+    background: linear-gradient(#f4f3ea, #becdf8);
 }
