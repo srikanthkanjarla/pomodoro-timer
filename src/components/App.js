@@ -3,6 +3,7 @@ import Header from './Header';
 import Quotes from './Quotes';
 import PomodoroTimer from './Timer';
 import TimerSettings from './TimerSettings';
+import Todo from './Todo/Todo';
 import alaramSound from '../assets/alaram.mp3';
 import './App.css';
 
@@ -182,6 +183,7 @@ class App extends React.Component {
           onUpdateSound={this.handleSoundSetting}
           onAutoStart={this.handleAutoStart}
         />
+        <Todo />
         {/* eslint-disable-next-line jsx-a11y/media-has-caption */}
         <audio src={alaramSound} ref={this.audioRef} />
       </div>
