@@ -1,15 +1,15 @@
 .quote {
     flex: 1 1 auto;
     width: 25%;
+    height: 435px;
     color: #2c3d55;
     box-shadow: 0 0 1px 1px rgb(160, 227, 219);
     border-radius: 15px;
     text-align: center;
-    margin: 10px;
+    margin-left: 10px;
     display: flex;
     flex-flow: column nowrap;
     justify-content: center;
-    align-items: center;
     font-family: "Text Me One", sans-serif;
 }
 
@@ -39,7 +39,9 @@
 @media (min-width: 320px) and (max-width: 480px) {
     .quote {
         width: 100%;
+        height: auto;
         margin: 0 10px;
+        padding: 0 5px;
     }
     .quote p {
         padding: 0;

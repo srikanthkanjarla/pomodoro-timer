@@ -1,78 +1,87 @@
+.settings {
+  padding: 20px;
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  margin: 0 auto;
+  width: 90%;
+}
+
+.settings h2 {
+  margin-left: 15px;
+  font-size: 18px;
+  width: 100%;
+}
+
 .timer-settings {
-  flex: 1 1 25%;
-  box-shadow: 0 0 1px 1px rgb(255, 255, 0);
-  padding: 40px 0;
-  border-radius: 15px;
+  flex: 1 1 auto;
+}
+
+.other-settings {
+  flex: 1 1 auto;
+}
+
+.settings label {
+  display: inline-block;
   margin: 10px;
 }
 
-.timer-settings h2 {
-  text-align: center;
-  margin: 0 0 40px 0;
-}
-
-.timer-settings label {
-  display: flex;
-  justify-content: space-between;
-  padding: 0 50px;
-}
-
-.timer-settings input[type="number"] {
+.settings input[type="number"] {
   width: 40px;
   padding: 5px;
-  margin: 5px;
+  margin-right: 15px;
   box-shadow: 0 0 1px 1px rgb(255, 99, 71);
   border-radius: 3px;
   border: 0;
   font-size: 16px;
 }
 
-.timer-settings input[type="number"]:focus {
+.settings input[type="number"]:focus {
   box-shadow: 0 0 2px 2px rgb(255, 99, 71);
   outline: 0;
 }
 
-.timer-settings input[type="checkbox"] {
+.settings input[type="checkbox"] {
   display: none;
 }
 
-.timer-settings span {
-  width: 25px;
-  margin: 5px;
+.settings span {
+  width: 16px;
+  height: 16px;
+  margin-right: 15px;
   box-shadow: 0 0 1px 1px rgb(255, 99, 71);
   border-radius: 3px;
-  height: 25px;
   cursor: pointer;
   position: relative;
   background-color: #ffffff;
+  display: inline-block;
+  vertical-align: middle;
 }
 
-.timer-settings span:hover {
+.settings span:hover {
   box-shadow: 0 0 2px 2px rgb(255, 99, 71);
 }
 
-.timer-settings input[type="checkbox"]:checked + span::before {
+.settings input[type="checkbox"]:checked + span::before {
   content: "";
   position: absolute;
-  border-left: 3px solid #2c3d55;
-  border-bottom: 3px solid #2c3d55;
-  width: 15px;
-  height: 5px;
-  top: 6px;
-  left: 4px;
+  border-left: 2px solid #2c3d55;
+  border-bottom: 2px solid #2c3d55;
+  width: 10px;
+  height: 3px;
+  top: 4px;
+  left: 2px;
   -webkit-transform: rotate(80deg);
   transform: rotate(315deg);
 }
 
 @media (min-width: 320px) and (max-width: 480px) {
-  .timer-settings {
-    width: 100%;
-    padding: 15px 0;
-    box-shadow: none;
+  .settings {
+    flex-flow: column wrap;
+    align-items: center;
   }
-  .timer-settings h2 {
+  .settings h2 {
+    margin: 8px;
     text-align: left;
-    margin-left: 20px;
-    font-size: 18px;
   }
 }

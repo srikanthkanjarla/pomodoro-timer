@@ -1,42 +1,44 @@
 .todo-container {
-  width: 95vw;
-  height: 30vw;
-  min-height: 60vh;
-  margin-top: 20px;
-  padding-top: 50px;
+  align-self: flex-start;
+  min-height: 425px;
+  margin-right: 10px;
+  flex: 1 1 auto;
+  width: 28%;
+  box-shadow: 0 0 1px 1px rgb(255, 255, 0);
+  border-radius: 15px;
 }
 
 .todo-title {
   text-align: center;
   color: #a0099f;
+  font-size: 25px;
 }
 
 .todo-form {
   border: 1px solid #a0099f;
   display: flex;
-  width: 40vw;
   margin: 0 auto;
-  border-radius: 10px;
-  background: #ffffff;
+  border-radius: 15px;
+  width: 80%;
 }
 
 .todo-input {
-  padding: 13px;
+  padding: 10px;
   outline: none;
   border: 0;
   color: #2c3d55;
   font-weight: bold;
   font-size: 16px;
   flex: 2 1 auto;
-  border-radius: 10px;
+  border-radius: 15px;
+  background: #ffffff;
 }
 
 .btn-add-todo {
   outline: none;
   border: 0;
-  border-left: 1px solid #a0099f;
-  border-top-right-radius: 8px;
-  border-bottom-right-radius: 8px;
+  border-top-right-radius: 14px;
+  border-bottom-right-radius: 14px;
   width: 60px;
   background: #a0099f;
   color: #ffffff;
@@ -54,20 +56,16 @@
 .todo-filter input[type="button"] {
   border: 0;
   outline: 0;
-  margin: 5px;
-  padding: 5px 15px;
-  font-size: 16px;
-}
-
-.todo-items {
-  padding-left: 400px;
-  margin: 0 auto;
+  margin: 3px;
+  padding: 3px 10px;
+  font-size: 15px;
+  cursor: pointer;
 }
 
 .todo-items li {
   list-style-type: none;
-  padding: 10px;
-  font-size: 20px;
+  padding: 8px;
+  font-size: 16px;
 }
 
 .todo-items input[type="checkbox"] {
@@ -99,6 +97,9 @@
 }
 
 @media (min-width: 320px) and (max-width: 480px) {
+  .todo-container {
+    box-shadow: none;
+  }
   .todo-form {
     width: 90vw;
   }

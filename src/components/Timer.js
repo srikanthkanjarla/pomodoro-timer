@@ -7,7 +7,7 @@ import './Button.css';
 function PomodoroTimer(props) {
   const { elapsedMinutes, elapsedSeconds, isBreakTime, isTimerRunning, onStartTimer, onResetTimer } = props;
   const clockStyle = {
-    boxShadow: ' 0 0 10px 10px #3066be,0px 0px 3px 3px inset #6d9dc5',
+    boxShadow: ' 0 0 0 10px #3066be,0 0 0 5px inset #6d9dc5',
   };
   /* update document title with clock time */
   document.title = `${`${elapsedMinutes < 10 ? `0${elapsedMinutes}` : elapsedMinutes} : `}${
@@ -21,7 +21,6 @@ function PomodoroTimer(props) {
         {' : '}
         {elapsedSeconds < 10 ? `0${elapsedSeconds}` : elapsedSeconds}
       </div>
-      <br />
       <div className="btn-controls">
         <Button
           name="start"

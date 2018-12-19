@@ -14,43 +14,48 @@ function PomodoroTimerSettings(props) {
     onAutoStart,
   } = props;
   return (
-    <div className="timer-settings">
+    <div className="settings">
       <h2>settings</h2>
-      <label htmlFor="session">
-        Session Length
-        <input
-          type="number"
-          id="session"
-          min="1"
-          max="60"
-          value={sessionLength}
-          name="sessionTime"
-          onChange={onUpdateSession}
-        />
-      </label>
-
-      <label htmlFor="break">
-        Break Length
-        <input
-          type="number"
-          id="break"
-          min="1"
-          max="20"
-          value={breakLength}
-          name="breakTime"
-          onChange={onUpdateBreak}
-        />
-      </label>
-      <label htmlFor="sounds">
-        Sounds
-        <input type="checkbox" id="sounds" name="timer-sounds" checked={isSoundOn} onChange={onUpdateSound} />
-        <span />
-      </label>
-      <label htmlFor="auto-start">
-        Auto start session
-        <input type="checkbox" id="auto-start" name="timer-sounds" checked={isAutoStart} onChange={onAutoStart} />
-        <span />
-      </label>
+      <div className="timer-settings">
+        <label htmlFor="session">
+          <input
+            type="number"
+            id="session"
+            min="1"
+            max="60"
+            value={sessionLength}
+            name="sessionTime"
+            onChange={onUpdateSession}
+          />
+          Session Length
+        </label>
+        <br />
+        <label htmlFor="break">
+          <input
+            type="number"
+            id="break"
+            min="1"
+            max="20"
+            value={breakLength}
+            name="breakTime"
+            onChange={onUpdateBreak}
+          />
+          Break Length
+        </label>
+      </div>
+      <div className="other-settings">
+        <label htmlFor="sounds" className="sound-setting">
+          <input type="checkbox" id="sounds" name="timer-sounds" checked={isSoundOn} onChange={onUpdateSound} />
+          <span />
+          Sounds
+        </label>
+        <br />
+        <label htmlFor="auto-start" className="auto-start">
+          <input type="checkbox" id="auto-start" name="timer-sounds" checked={isAutoStart} onChange={onAutoStart} />
+          <span />
+          Auto start session
+        </label>
+      </div>
     </div>
   );
 }
@@ -61,5 +66,7 @@ PomodoroTimerSettings.propTypes = {
   onUpdateBreak: PropTypes.func.isRequired,
   onUpdateSound: PropTypes.func.isRequired,
   onAutoStart: PropTypes.func.isRequired,
+  isSoundOn: PropTypes.bool.isRequired,
+  isAutoStart: PropTypes.bool.isRequired,
 };
 export default PomodoroTimerSettings;

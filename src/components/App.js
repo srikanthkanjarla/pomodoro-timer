@@ -175,14 +175,17 @@ class App extends React.Component {
       <div className="container">
         <Header />
         <Quotes isBreakTime={isBreakTime} quoteText={quoteText} />
-        <PomodoroTimer {...this.state} onStartTimer={this.handleStart} onResetTimer={this.handleReset} />
-        <TimerSettings
-          {...this.state}
-          onUpdateSession={this.handleSessionLength}
-          onUpdateBreak={this.handleBreakLength}
-          onUpdateSound={this.handleSoundSetting}
-          onAutoStart={this.handleAutoStart}
-        />
+
+        <div className="timer-container">
+          <PomodoroTimer {...this.state} onStartTimer={this.handleStart} onResetTimer={this.handleReset} />
+          <TimerSettings
+            {...this.state}
+            onUpdateSession={this.handleSessionLength}
+            onUpdateBreak={this.handleBreakLength}
+            onUpdateSound={this.handleSoundSetting}
+            onAutoStart={this.handleAutoStart}
+          />
+        </div>
         <Todo />
         {/* eslint-disable-next-line jsx-a11y/media-has-caption */}
         <audio src={alaramSound} ref={this.audioRef} />
