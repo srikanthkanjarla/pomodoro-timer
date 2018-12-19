@@ -20,6 +20,7 @@ class App extends React.Component {
       isSoundOn: true,
       isAutoStart: true,
       quoteText: 'Self-trust is the first secret of success',
+      quoteAuthor: '',
     };
     const { sessionLength } = this.state;
     this.state.elapsedMinutes = sessionLength;
@@ -43,6 +44,7 @@ class App extends React.Component {
     window[this.callbackMethodName] = function(data) {
       that.setState({
         quoteText: data.quoteText,
+        quoteAuthor: data.quoteAuthor,
       });
     };
     this.getJsonp(this.END_POINT, this.callbackMethodName);
@@ -170,11 +172,11 @@ class App extends React.Component {
   }
 
   render() {
-    const { isBreakTime, quoteText } = this.state;
+    const { isBreakTime, quoteText, quoteAuthor } = this.state;
     return (
       <div className="container">
         <Header />
-        <Quotes isBreakTime={isBreakTime} quoteText={quoteText} />
+        <Quotes isBreakTime={isBreakTime} quoteText={quoteText} quoteAuthor={quoteAuthor} />
 
         <div className="timer-container">
           <PomodoroTimer {...this.state} onStartTimer={this.handleStart} onResetTimer={this.handleReset} />
