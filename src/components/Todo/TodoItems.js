@@ -5,18 +5,22 @@ function TodoItems(props) {
   const { tasks, onToggleTodo } = props;
   return (
     <ul className="todo-items">
-      {tasks.map(task => (
-        <li
-          key={task.id}
-          style={task.completed ? { textDecoration: 'line-through', textDecorationColor: '#a0099f' } : {}}
-        >
-          <label htmlFor={task.id}>
-            <input type="checkbox" id={task.id} checked={task.completed} onChange={() => onToggleTodo(task.id)} />
-            <span />
-          </label>
-          {task.text}
-        </li>
-      ))}
+      {tasks.length ? (
+        tasks.map(task => (
+          <li
+            key={task.id}
+            style={task.completed ? { textDecoration: 'line-through', textDecorationColor: '#a0099f' } : {}}
+          >
+            <label htmlFor={task.id}>
+              <input type="checkbox" id={task.id} checked={task.completed} onChange={() => onToggleTodo(task.id)} />
+              <span />
+            </label>
+            {task.text}
+          </li>
+        ))
+      ) : (
+        <p className="no-tasks">No tasks found</p>
+      )}
     </ul>
   );
 }
