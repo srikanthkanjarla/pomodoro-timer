@@ -21,7 +21,7 @@
 .quote p:before,
 .quote p:after {
     content: "\201c";
-    color: rgb(255, 99, 71);
+    color: #ff6347;
     padding: 0 10px;
     font-size: 50px;
     font-weight: bold;
@@ -34,6 +34,16 @@
 .quote p:after {
     content: "\201d";
     text-align: right;
+}
+
+.quote-author {
+    font-family: "Roboto", sans-serif;
+    font-size: 16px;
+    color: #ff6347;
+}
+
+.quote-author:before {
+    content: "-- ";
 }
 
 @media (min-width: 320px) and (max-width: 480px) {
