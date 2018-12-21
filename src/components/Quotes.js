@@ -15,7 +15,7 @@ function Quotes(props) {
       ) : (
         <div>
           <p>{quoteText}</p>
-          <span style={{ color: '#a0099f', fontWeight: 'bold' }}>{quoteAuthor}</span>
+          <span className="quote-author">{quoteAuthor}</span>
         </div>
       )}
     </div>
