@@ -11,6 +11,7 @@ const UPDATE_SESSION_LENGTH = 'UPDATE_SESSION_LENGTH';
 const UPDATE_BREAK_LENGTH = 'UPDATE_BREAK_LENGTH';
 const TOGGLE_ALARM_SOUND = 'TOGGLE_ALARM_SOUND';
 const TOGGLE_AUTO_START = 'TOGGLE_AUTO_START';
+const UPDATE_QUOTE = 'UPDATE_QUOTE';
 
 /* action creators */
 export const startTimer = () => ({
@@ -53,4 +54,9 @@ export const toggleAlarmSound = () => ({
 
 export const toggleAutoStart = () => ({
   type: TOGGLE_AUTO_START,
+});
+
+export const updateQuote = quote => ({
+  type: UPDATE_QUOTE,
+  payload: quote,
 });
