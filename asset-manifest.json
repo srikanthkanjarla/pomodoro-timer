@@ -1,14 +1,15 @@
 {
-  "main.css": "/pomodoro-timer/static/css/main.3ab89022.chunk.css",
-  "main.js": "/pomodoro-timer/static/js/main.9273f1f4.chunk.js",
-  "main.js.map": "/pomodoro-timer/static/js/main.9273f1f4.chunk.js.map",
-  "static/js/1.061eda52.chunk.js": "/pomodoro-timer/static/js/1.061eda52.chunk.js",
-  "static/js/1.061eda52.chunk.js.map": "/pomodoro-timer/static/js/1.061eda52.chunk.js.map",
+  "main.css": "/pomodoro-timer/static/css/main.164a2a66.chunk.css",
+  "main.js": "/pomodoro-timer/static/js/main.3abc0ab9.chunk.js",
+  "main.js.map": "/pomodoro-timer/static/js/main.3abc0ab9.chunk.js.map",
+  "static/js/1.1791b405.chunk.js": "/pomodoro-timer/static/js/1.1791b405.chunk.js",
+  "static/js/1.1791b405.chunk.js.map": "/pomodoro-timer/static/js/1.1791b405.chunk.js.map",
   "runtime~main.js": "/pomodoro-timer/static/js/runtime~main.0658e00c.js",
   "runtime~main.js.map": "/pomodoro-timer/static/js/runtime~main.0658e00c.js.map",
+  "static/css/main.164a2a66.chunk.css.map": "/pomodoro-timer/static/css/main.164a2a66.chunk.css.map",
   "static/media/alaram.mp3": "/pomodoro-timer/static/media/alaram.4b9995ee.mp3",
-  "static/css/main.3ab89022.chunk.css.map": "/pomodoro-timer/static/css/main.3ab89022.chunk.css.map",
+  "static/media/pomodoroApp.css": "/pomodoro-timer/static/media/digital-webfont.5b0f802e.woff",
   "index.html": "/pomodoro-timer/index.html",
-  "precache-manifest.7f9a01a5350d30de5f7406c0870d045c.js": "/pomodoro-timer/precache-manifest.7f9a01a5350d30de5f7406c0870d045c.js",
+  "precache-manifest.985025118c6707d1eca56fc9ba3a6177.js": "/pomodoro-timer/precache-manifest.985025118c6707d1eca56fc9ba3a6177.js",
   "service-worker.js": "/pomodoro-timer/service-worker.js"
 }
