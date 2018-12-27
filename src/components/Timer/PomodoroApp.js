@@ -38,6 +38,10 @@ class PomodoroTimer extends React.Component {
         currentProps.resetTimer();
       }
     }
+    // sync elapsedSeconds with sessionLength on sessionLength update
+    if (!currentProps.isTimerRunning && !currentProps.isTimerPaused) {
+      currentProps.resetTimer();
+    }
   }
 
   componentWillUnmount() {
@@ -48,15 +52,18 @@ class PomodoroTimer extends React.Component {
     const { sessionLength, secondsElapsed, isTimerRunning, isTimerPaused, isBreakTime } = this.props;
     const { startTimer, stopTimer, resetTimer } = this.props;
     return (
-      <div className="timer">
-        <Clock
-          sessionLength={sessionLength}
-          secondsElapsed={secondsElapsed}
-          isTimerRunning={isTimerRunning}
-          isTimerPaused={isTimerPaused}
-          isBreakTime={isBreakTime}
-        />
-        <ClockControls isTimerRunning={isTimerRunning} onStart={startTimer} onStop={stopTimer} onReset={resetTimer} />
+      <div className="timer-container">
+        <div className="timer">
+          <Clock
+            sessionLength={sessionLength}
+            secondsElapsed={secondsElapsed}
+            isTimerRunning={isTimerRunning}
+            isTimerPaused={isTimerPaused}
+            isBreakTime={isBreakTime}
+          />
+          <ClockControls isTimerRunning={isTimerRunning} onStart={startTimer} onStop={stopTimer} onReset={resetTimer} />
+        </div>
+
         <TimerSettings />
         {/* eslint-disable-next-line jsx-a11y/media-has-caption */}
         <audio src={alaramSound} ref={this.alaramRef} />
