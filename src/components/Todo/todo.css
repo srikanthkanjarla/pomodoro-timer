@@ -1,0 +1,119 @@
+.todo-container {
+  align-self: flex-start;
+  min-height: 425px;
+  margin-right: 10px;
+  flex: 1 1 auto;
+  width: 28%;
+  box-shadow: 0 0 1px 1px rgb(255, 255, 0);
+  border-radius: 15px;
+}
+
+.todo-title {
+  text-align: center;
+  color: #005555;
+  font-size: 25px;
+}
+
+.todo-form {
+  border: 1px solid #005555;
+  display: flex;
+  margin: 0 auto;
+  border-radius: 15px;
+  width: 80%;
+}
+
+.todo-input {
+  padding: 10px;
+  outline: none;
+  border: 0;
+  color: #2c3d55;
+  font-weight: bold;
+  font-size: 16px;
+  flex: 2 1 auto;
+  border-radius: 15px;
+  background: #ffffff;
+}
+
+.btn-add-todo {
+  outline: none;
+  border: 0;
+  border-top-right-radius: 14px;
+  border-bottom-right-radius: 14px;
+  width: 60px;
+  background-color: #005555;
+  color: #ffffff;
+  cursor: pointer;
+}
+
+.btn-add-todo:active {
+  background: linear-gradient(#ffffff, #3f6e9e);
+}
+
+.todo-filter {
+  text-align: center;
+}
+
+.todo-filter input[type="button"] {
+  border: 0;
+  outline: 0;
+  margin: 3px;
+  padding: 3px 10px;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+.todo-items li {
+  list-style-type: none;
+  padding: 8px;
+  font-size: 16px;
+}
+
+.todo-items input[type="checkbox"] {
+  display: none;
+}
+
+.todo-items span {
+  box-shadow: 0 0 1px 1px #005555;
+  border-radius: 3px;
+  position: relative;
+  margin-right: 10px;
+  height: 16px;
+  width: 16px;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.todo-items input[type="checkbox"]:checked + span {
+  background-color: #005555;
+}
+
+.todo-items input[type="checkbox"]:checked + span::before {
+  content: "";
+  position: absolute;
+  border-left: 2px solid #ffffff;
+  border-bottom: 2px solid #ffffff;
+  width: 10px;
+  height: 3px;
+  top: 4px;
+  left: 2px;
+  -webkit-transform: rotate(80deg);
+  transform: rotate(315deg);
+}
+
+.no-tasks {
+  text-align: center;
+  padding: 50px 0;
+}
+
+@media (min-width: 320px) and (max-width: 480px) {
+  .todo-container {
+    box-shadow: none;
+  }
+  .todo-form {
+    width: 90vw;
+  }
+  .todo-items {
+    padding-left: 10px;
+    margin: 0 auto;
+  }
+}
