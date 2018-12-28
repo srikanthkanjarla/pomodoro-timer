@@ -1,5 +1,5 @@
 import { connect } from 'react-redux';
-import Quotes from '../components/Quotes';
+import Quotes from '../components/Quote/Quotes';
 import { updateQuote } from '../actions';
 
 const mapStateToProps = state => ({

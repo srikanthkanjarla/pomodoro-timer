@@ -1,5 +1,5 @@
 import React from 'react';
-import Header from './Header';
+import Header from './Header/Header';
 import Quotes from '../containers/GetQuote';
 import PomodoroTimer from '../containers/PomodoroTimer';
 import Todo from './Todo/Todo';
