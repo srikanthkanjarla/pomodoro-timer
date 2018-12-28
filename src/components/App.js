@@ -2,7 +2,7 @@ import React from 'react';
 import Header from './Header/Header';
 import Quotes from '../containers/GetQuote';
 import PomodoroTimer from '../containers/PomodoroTimer';
-import Todo from './Todo/Todo';
+import TodoApp from '../containers/TodoApp';
 
 import './App.css';
 
@@ -12,7 +12,7 @@ function App() {
       <Header />
       <Quotes />
       <PomodoroTimer />
-      <Todo />
+      <TodoApp />
     </div>
   );
 }

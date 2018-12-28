@@ -6,6 +6,8 @@ const initialState = {
 };
 function todoReducer(state = initialState, action) {
   switch (action.type) {
+    case 'SYNC_TODO_DB':
+      return { ...state, tasks: action.todos, nextTodoId: action.id };
     case 'ADD_TODO':
       return {
         ...state,

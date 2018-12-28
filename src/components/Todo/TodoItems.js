@@ -1,25 +1,17 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import Task from './Task';
 
 function TodoItems(props) {
-  const { tasks, onToggleTodo } = props;
+  const { tasks, toggleTodo } = props;
   return (
     <ul className="todo-items">
       {tasks.length ? (
         tasks.map(task => (
-          <li
-            key={task.id}
-            style={task.completed ? { textDecoration: 'line-through', textDecorationColor: '#a0099f' } : {}}
-          >
-            <label htmlFor={task.id}>
-              <input type="checkbox" id={task.id} checked={task.completed} onChange={() => onToggleTodo(task.id)} />
-              <span />
-            </label>
-            {task.text}
-          </li>
+          <Task key={task.id} id={task.id} completed={task.completed} text={task.text} toggleTodo={toggleTodo} />
         ))
       ) : (
-        <p className="no-tasks">No tasks found</p>
+        <li className="no-tasks">No tasks found</li>
       )}
     </ul>
   );
@@ -32,6 +24,6 @@ TodoItems.propTypes = {
       completed: PropTypes.bool.isRequired,
     })
   ).isRequired,
-  onToggleTodo: PropTypes.func.isRequired,
+  toggleTodo: PropTypes.func.isRequired,
 };
 export default TodoItems;
