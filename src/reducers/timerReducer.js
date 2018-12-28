@@ -56,16 +56,16 @@ function timerReducer(state = initialState, action) {
     case 'UPDATE_SESSION_LENGTH':
       return {
         ...state,
-        sessionLength: action.payload,
+        sessionLength: action.value,
       };
 
     case 'UPDATE_BREAK_LENGTH':
       return {
         ...state,
-        breakLength: action.payload,
+        breakLength: action.value,
       };
 
-    case 'TOGGLE_ALARAM_SOUND':
+    case 'TOGGLE_ALARM_SOUND':
       return { ...state, isAlarmON: !state.isAlarmON };
 
     case 'TOGGLE_AUTO_START':
