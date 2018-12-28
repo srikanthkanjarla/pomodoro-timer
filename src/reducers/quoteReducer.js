@@ -6,7 +6,7 @@ const initialState = {
 function quoteReducer(state = initialState, action) {
   switch (action.type) {
     case 'UPDATE_QUOTE':
-      return { ...state, quoteText: action.payload.text, quoteAuthor: action.payload.author, isNewQuote: false };
+      return { ...state, quoteText: action.quote.text, quoteAuthor: action.quote.author };
     default:
       return { ...state };
   }
