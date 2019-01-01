@@ -1,67 +1,69 @@
-.quote {
-  flex: 1 1 auto;
-  width: 25%;
-  height: 435px;
-  color: #2c3d55;
-  box-shadow: 0 0 1px 1px rgb(160, 227, 219);
-  border-radius: 15px;
-  text-align: center;
-  margin-left: 10px;
-  display: flex;
-  flex-flow: column nowrap;
-  justify-content: center;
-  font-family: "Text Me One", sans-serif;
+.quote-container {
+    flex: 1 1 auto;
+    width: 25%;
+    height: 435px;
+    box-shadow: 0 0 1px 1px rgb(160, 227, 219);
+    border-radius: 15px;
+    text-align: center;
+    margin-left: 10px;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    font-family: "Text Me One", sans-serif;
 }
 
-.quote p {
-  padding: 0 20px;
-  font-size: 23px;
+.quote-container p {
+    margin: 0;
 }
 
-.quote p:before,
-.quote p:after {
-  content: "\201c";
-  color: #005555;
-  padding: 0 10px;
-  font-size: 50px;
-  font-weight: bold;
-  font-family: auto;
-  display: block;
-  text-align: left;
-  font-family: Arial, Helvetica, sans-serif;
+.quote-text {
+    padding: 0 20px;
+    font-size: 23px;
+    color: #2c3d55;
 }
 
-.quote p:after {
-  content: "\201d";
-  text-align: right;
+.quotation-mark {
+    color: #005555;
+    font-size: 50px;
+    font-family: serif, sans-serif, monospace;
+}
+
+.left {
+    padding: 0 0 0 30px;
+    text-align: left;
+}
+
+.right {
+    padding: 0 30px 0 0;
+    text-align: right;
 }
 
 .quote-author {
-  font-family: "Roboto", sans-serif;
-  font-size: 16px;
-  color: #005555;
+    font-family: "Roboto", sans-serif;
+    font-size: 16px;
+    color: #005555;
 }
 
 .quote-author:before {
-  content: "-- ";
+    content: "-- ";
 }
 
 @media (min-width: 320px) and (max-width: 480px) {
-  .quote {
-    width: 100%;
-    height: auto;
-    margin: 0 10px;
-    padding: 0 5px;
-  }
-  .quote p {
-    padding: 0;
-    font-size: 18px;
-    margin: 0;
-  }
-  .quote p:before,
-  .quote p:after {
-    font-size: 25px;
-    padding: 0 5px;
-    margin: 10px 0 0 0;
-  }
+    .quote {
+        width: 100%;
+        height: auto;
+        margin: 0 10px;
+        padding: 0 5px;
+    }
+    .quote p {
+        padding: 0;
+        font-size: 18px;
+        margin: 0;
+    }
+    .quote p:before,
+    .quote p:after {
+        font-size: 25px;
+        padding: 0 5px;
+        margin: 10px 0 0 0;
+    }
 }
