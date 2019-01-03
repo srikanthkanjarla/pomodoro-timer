@@ -16,8 +16,11 @@ const UPDATE_QUOTE = 'UPDATE_QUOTE';
 const SYNC_TODO_DB = 'SYNC_TODO_DB';
 const ADD_TODO = 'ADD_TODO';
 const TOGGLE_TODO = 'TOGGLE_TODO';
+const DELETE_TODO = 'DELETE_TODO';
 const SET_TODO_FILTER = 'SET_TODO_FILTER';
 const UPDATE_INPUT = 'UPDATE_INPUT';
+const SET_NOTIFICATIONS = 'SET_NOTIFICATIONS';
+const REMOVE_NOTIFICATION = 'REMOVE_NOTIFICATION';
 
 // action creators
 // timer actions
@@ -77,20 +80,34 @@ export const syncTodosDB = (id, todos) => ({
   todos,
 });
 
-export const addTodo = todo => ({
-  type: ADD_TODO,
-  todo,
-});
 export const updateInput = text => ({
   type: UPDATE_INPUT,
   text,
 });
+
+export const addTodo = todo => ({
+  type: ADD_TODO,
+  todo,
+});
+
 export const toggleTodo = id => ({
   type: TOGGLE_TODO,
   id,
 });
-
+export const deleteTodo = id => ({
+  type: DELETE_TODO,
+  id,
+});
 export const setFilter = filter => ({
   type: SET_TODO_FILTER,
   filter,
+});
+
+export const setNotifications = text => ({
+  type: SET_NOTIFICATIONS,
+  text,
+});
+export const removeNotification = id => ({
+  type: REMOVE_NOTIFICATION,
+  id,
 });
