@@ -10,15 +10,15 @@ function Notifications(props) {
   }
   return (
     <div className="notifications">
-      {notifications.map(item => {
+      {notifications.map(message => {
         // remove notification after 4 seconds
         timeOutId = setTimeout(() => {
-          removeNotification(item.id);
+          removeNotification(message.id);          
         }, 4000);
-        // return notification message to render
+        // render notification message
         return (
-          <p key={item.id} className="show-msg">
-            {item.text}
+          <p key={message.id} className="show-msg">
+            {message.text}
           </p>
         );
       })}
