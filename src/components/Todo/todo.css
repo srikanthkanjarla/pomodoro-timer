@@ -2,8 +2,7 @@
     align-self: flex-start;
     min-height: 425px;
     margin-right: 10px;
-    flex: 1 1 auto;
-    width: 28%;
+    flex: 1;
     box-shadow: 0 0 1px 1px rgb(255, 255, 0);
     border-radius: 15px;
 }
@@ -30,7 +29,8 @@
     font-weight: bold;
     font-size: 16px;
     flex: 2 1 auto;
-    border-radius: 15px;
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
     background: #ffffff;
 }
 
@@ -120,7 +120,9 @@
 
 .todo-items li:hover .remove-btn {
     opacity: 1;
-    background: red;
+    border: 1px outset #005555;
+    color: crimson;
+    background: #ffffff;
 }
 
 .no-tasks {

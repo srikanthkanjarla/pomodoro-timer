@@ -1,66 +1,65 @@
 @font-face {
-  font-family: "digital";
-  src: url("../../assets/digital-webfont.woff") format("woff2"),
-    url("../../assets/digital-webfont.woff2") format("woff");
-  font-weight: normal;
-  font-style: normal;
+    font-family: "digital";
+    src: url("../../assets/digital-webfont.woff") format("woff2"), url("../../assets/digital-webfont.woff2") format("woff");
+    font-weight: normal;
+    font-style: normal;
 }
 
 .timer-container {
-  flex: 2 1 auto;
-  align-self: flex-start;
-  border-radius: 15px;
-  box-shadow: 0 0 1px 2px rgba(102, 51, 153, 0.4);
-  padding: 40px 0;
-  display: flex;
-  flex-flow: column wrap;
-  align-items: center;
-  justify-content: center;
-  margin: 0 10px;
+    flex: 1.4;
+    align-self: flex-start;
+    border-radius: 15px;
+    box-shadow: 0 0 1px 2px rgba(102, 51, 153, 0.4);
+    padding: 40px 0;
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    justify-content: center;
+    margin: 0 10px;
 }
 
 .timer {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .clock {
-  height: 200px;
-  width: 200px;
-  border-radius: 50%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-family: "digital", Arial, Helvetica, sans-serif;
-  letter-spacing: 5px;
-  font-size: 45px;
-  font-weight: bold;
-  margin: 15px;
+    height: 200px;
+    width: 200px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "digital", Arial, Helvetica, sans-serif;
+    letter-spacing: 5px;
+    font-size: 45px;
+    font-weight: bold;
+    margin: 15px;
 }
 
 .session {
-  box-shadow: 0 0 0 10px rgba(0, 85, 85, 0.8),
-    0px 0px 0 6px inset rgba(0, 85, 85, 0.4);
+    box-shadow: 0 0 5px 10px hsla(180, 100%, 17%, 1), 0 0 10px 5px hsla(180, 100%, 17%, 0.7);
+    border: 4px solid hsla(180, 100%, 17%, 0.6);
 }
 
 .break {
-  box-shadow: 0 0 0 10px #3066be, 0 0 0 5px inset #6d9dc5;
+    box-shadow: 0 0 0 10px #3066be, 0 0 0 5px inset #6d9dc5;
 }
 
 @media (min-width: 320px) and (max-width: 480px) {
-  .clock {
-    height: 180px;
-    width: 180px;
-    margin: 20px 40px 30px 40px;
-    font-size: 40px;
-    flex-flow: column wrap;
-  }
-  .timer-container {
-    box-shadow: none;
-    padding: 5px 0;
-  }
-  .timer {
-    flex-flow: column wrap;
-  }
+    .clock {
+        height: 180px;
+        width: 180px;
+        margin: 20px 40px 30px 40px;
+        font-size: 40px;
+        flex-flow: column wrap;
+    }
+    .timer-container {
+        box-shadow: none;
+        padding: 5px 0;
+    }
+    .timer {
+        flex-flow: column wrap;
+    }
 }
