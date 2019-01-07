@@ -11,12 +11,10 @@ const mapStateToProps = state => ({
 
 const mapDispatchToProps = dispatch => ({
   updateSessionLength: value => {
-    const val = Number.isNaN(value) ? 0 : value;
-    dispatch(updateSessionLength(val));
+    dispatch(updateSessionLength(value));
   },
   updateBreakLength: value => {
-    const val = Number.isNaN(value) ? 0 : value;
-    dispatch(updateBreakLength(val));
+    dispatch(updateBreakLength(value));
   },
   toggleAlarmSound: () => dispatch(toggleAlarmSound()),
   toggleAutoStart: () => dispatch(toggleAutoStart()),

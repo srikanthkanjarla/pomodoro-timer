@@ -1,7 +1,8 @@
 const initialState = {
   sessionLength: 25,
   breakLength: 5,
-  secondsElapsed: 0,
+  clockTime: 1500,
+  secondsElapsed: 1500,
   isTimerRunning: false,
   isTimerPaused: false,
   isBreakTime: false,
@@ -31,7 +32,7 @@ function timerReducer(state = initialState, action) {
         isTimerRunning: false,
         isTimerPaused: false,
         isBreakTime: false,
-        secondsElapsed: state.sessionLength * 60,
+        secondsElapsed: state.clockTime,
       };
     case 'RUN_TIMER':
       return {
@@ -50,19 +51,21 @@ function timerReducer(state = initialState, action) {
         isTimerRunning: true,
         isBreakTime: false,
         isTimerPaused: false,
-        secondsElapsed: state.sessionLength * 60,
+        secondsElapsed: state.clockTime,
       };
+
     /* Clock settings */
     case 'UPDATE_SESSION_LENGTH':
       return {
         ...state,
-        sessionLength: action.value,
+        sessionLength: action.value !== '' ? parseInt(action.value, 10) : '',
+        clockTime: action.value !== '' ? parseInt(action.value, 10) * 60 : 1500,
       };
 
     case 'UPDATE_BREAK_LENGTH':
       return {
         ...state,
-        breakLength: action.value,
+        breakLength: action.value !== '' ? parseInt(action.value, 10) : '',
       };
 
     case 'TOGGLE_ALARM_SOUND':
@@ -75,7 +78,9 @@ function timerReducer(state = initialState, action) {
       };
 
     default:
-      return { ...state, secondsElapsed: state.sessionLength * 60 };
+      return {
+        ...state,
+      };
   }
 }
 

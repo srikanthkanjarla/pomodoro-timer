@@ -17,7 +17,7 @@ function PomodoroTimerSettings(props) {
             max="60"
             value={sessionLength}
             name="sessionLength"
-            onChange={event => updateSessionLength(parseInt(event.target.value, 10))}
+            onChange={event => updateSessionLength(event.target.value)}
           />
           Session Length
         </label>
@@ -30,7 +30,7 @@ function PomodoroTimerSettings(props) {
             max="20"
             value={breakLength}
             name="breakLength"
-            onChange={event => updateBreakLength(parseInt(event.target.value, 10))}
+            onChange={event => updateBreakLength(event.target.value)}
           />
           Break Length
         </label>
@@ -58,8 +58,8 @@ function PomodoroTimerSettings(props) {
   );
 }
 PomodoroTimerSettings.propTypes = {
-  sessionLength: PropTypes.number.isRequired,
-  breakLength: PropTypes.number.isRequired,
+  sessionLength: PropTypes.oneOfType([PropTypes.number, PropTypes.string]).isRequired,
+  breakLength: PropTypes.oneOfType([PropTypes.number, PropTypes.string]).isRequired,
   updateSessionLength: PropTypes.func.isRequired,
   updateBreakLength: PropTypes.func.isRequired,
   toggleAlarmSound: PropTypes.func.isRequired,

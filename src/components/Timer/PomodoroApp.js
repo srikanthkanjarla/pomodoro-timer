@@ -30,7 +30,9 @@ class PomodoroTimer extends React.Component {
     }
     // after break time reset or restart timer and play alaram sound
     if (currentProps.secondsElapsed === 0 && currentProps.isBreakTime) {
+      // play alaram sound after break time
       this.alaramRef.current.play();
+      // if auto start is true re start
       if (currentProps.isAutoStartON) {
         currentProps.autoStartTimer();
       } else {
@@ -49,13 +51,13 @@ class PomodoroTimer extends React.Component {
   }
 
   render() {
-    const { sessionLength, secondsElapsed, isTimerRunning, isTimerPaused, isBreakTime } = this.props;
+    const { clockTime, secondsElapsed, isTimerRunning, isTimerPaused, isBreakTime } = this.props;
     const { startTimer, stopTimer, resetTimer } = this.props;
     return (
       <div className="timer-container">
         <div className="timer">
           <Clock
-            sessionLength={sessionLength}
+            clockTime={clockTime}
             secondsElapsed={secondsElapsed}
             isTimerRunning={isTimerRunning}
             isTimerPaused={isTimerPaused}
@@ -72,8 +74,8 @@ class PomodoroTimer extends React.Component {
   }
 }
 PomodoroTimer.propTypes = {
-  sessionLength: PropTypes.number.isRequired,
-  secondsElapsed: PropTypes.number.isRequired,
+  clockTime: PropTypes.oneOfType([PropTypes.number, PropTypes.string]).isRequired,
+  secondsElapsed: PropTypes.oneOfType([PropTypes.number, PropTypes.string]).isRequired,
   isBreakTime: PropTypes.bool.isRequired,
   isTimerRunning: PropTypes.bool.isRequired,
   isTimerPaused: PropTypes.bool.isRequired,

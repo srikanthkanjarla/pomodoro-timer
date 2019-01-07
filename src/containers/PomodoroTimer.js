@@ -3,7 +3,7 @@ import { startTimer, stopTimer, resetTimer, runTimer, startBreak, autoStartTimer
 import PomodoroTimer from '../components/Timer/PomodoroApp';
 
 const mapStateToProps = state => ({
-  sessionLength: state.timer.sessionLength,
+  clockTime: state.timer.clockTime,
   secondsElapsed: state.timer.secondsElapsed,
   isTimerRunning: state.timer.isTimerRunning,
   isTimerPaused: state.timer.isTimerPaused,
