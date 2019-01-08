@@ -1,5 +1,5 @@
 .notifications {
-    position: absolute;
+    position: fixed;
     top: 5px;
     right: 5px;
 }
@@ -10,10 +10,11 @@
     padding: 8px;
     width: 260px;
     text-align: center;
-    background-color: #ffd900ad;
-    color: black;
+    background-color: rgb(102, 51, 153);
+    color: #ffffff;
     border-radius: 5px;
     opacity: 0;
+    font-size: 18px;
 }
 
 @keyframes show-msg {
