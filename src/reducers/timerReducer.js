@@ -1,8 +1,11 @@
+// sessionLength, breakLength in minutes
+// clockTime,secondsElapsed in seconds
+
 const initialState = {
   sessionLength: 25,
   breakLength: 5,
   clockTime: 1500,
-  secondsElapsed: 1500,
+  secondsElapsed: 0,
   isTimerRunning: false,
   isTimerPaused: false,
   isBreakTime: false,
@@ -32,34 +35,37 @@ function timerReducer(state = initialState, action) {
         isTimerRunning: false,
         isTimerPaused: false,
         isBreakTime: false,
-        secondsElapsed: state.clockTime,
+        clockTime: state.sessionLength !== '' ? state.sessionLength * 60 : 1500, // in seconds
+        secondsElapsed: 0,
       };
     case 'RUN_TIMER':
       return {
         ...state,
-        secondsElapsed: state.secondsElapsed - 1,
+        secondsElapsed: state.secondsElapsed + 1,
       };
     case 'START_BREAK':
       return {
         ...state,
-        secondsElapsed: state.breakLength * 60,
+        secondsElapsed: 0,
+        clockTime: state.breakLength * 60,
         isBreakTime: true,
       };
     case 'AUTO_START_TIMER':
       return {
         ...state,
         isTimerRunning: true,
-        isBreakTime: false,
-        isTimerPaused: false,
-        secondsElapsed: state.clockTime,
       };
 
     /* Clock settings */
+    // update clockTime if timer not running - to reflect updated time in Clock
     case 'UPDATE_SESSION_LENGTH':
       return {
         ...state,
         sessionLength: action.value !== '' ? parseInt(action.value, 10) : '',
-        clockTime: action.value !== '' ? parseInt(action.value, 10) * 60 : 1500,
+        clockTime:
+          !state.isTimerRunning && !state.isTimerPaused && action.value !== ''
+            ? parseInt(action.value, 10) * 60
+            : state.clockTime,
       };
 
     case 'UPDATE_BREAK_LENGTH':
@@ -67,7 +73,6 @@ function timerReducer(state = initialState, action) {
         ...state,
         breakLength: action.value !== '' ? parseInt(action.value, 10) : '',
       };
-
     case 'TOGGLE_ALARM_SOUND':
       return { ...state, isAlarmON: !state.isAlarmON };
 

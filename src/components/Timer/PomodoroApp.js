@@ -4,45 +4,46 @@ import Clock from './Clock';
 import ClockControls from './ClockControls';
 import TimerSettings from '../../containers/TimerSettings';
 import './pomodoroApp.css';
-import alaramSound from '../../assets/alaram.mp3';
+import alarmSound from '../../assets/alarm.mp3';
 
 class PomodoroTimer extends React.Component {
   constructor(props) {
     super(props);
-    this.alaramRef = React.createRef();
+    this.alarmRef = React.createRef();
   }
 
   componentDidUpdate(prevProps) {
     const currentProps = this.props;
+    const { secondsElapsed, clockTime, isBreakTime, isAutoStartON, resetTimer, autoStartTimer } = currentProps;
+
     // start timer
+    // TODO - use Date object based timer than setInterval
     if (currentProps.isTimerRunning && !prevProps.isTimerRunning) {
       this.timerID = setInterval(() => {
         currentProps.runTimer();
       }, 1000);
     }
-    // pause/stop timer
+
+    // stop timer
     if (!currentProps.isTimerRunning && prevProps.isTimerRunning) {
       clearInterval(this.timerID);
     }
-    // start break time
-    if (currentProps.secondsElapsed === 0 && !currentProps.isBreakTime) {
+
+    // start break time, play alarm sound
+    if (secondsElapsed === clockTime && !isBreakTime) {
+      this.alarmRef.current.play();
       currentProps.startBreak();
     }
-    // after break time reset or restart timer and play alaram sound
-    if (currentProps.secondsElapsed === 0 && currentProps.isBreakTime) {
-      // play alaram sound after break time
-      this.alaramRef.current.play();
-      // if auto start is true re start
-      if (currentProps.isAutoStartON) {
-        currentProps.autoStartTimer();
+
+    // after break time reset or restart timer, play alarm sound
+    if (secondsElapsed === clockTime && isBreakTime) {
+      this.alarmRef.current.play();
+      resetTimer();
+      if (isAutoStartON) {
+        autoStartTimer();
       } else {
         clearInterval(this.timerID);
-        currentProps.resetTimer();
       }
-    }
-    // sync elapsedSeconds with sessionLength on sessionLength update
-    if (!currentProps.isTimerRunning && !currentProps.isTimerPaused) {
-      currentProps.resetTimer();
     }
   }
 
@@ -68,7 +69,7 @@ class PomodoroTimer extends React.Component {
 
         <TimerSettings />
         {/* eslint-disable-next-line jsx-a11y/media-has-caption */}
-        <audio src={alaramSound} ref={this.alaramRef} />
+        <audio src={alarmSound} ref={this.alarmRef} />
       </div>
     );
   }
