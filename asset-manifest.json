@@ -8,7 +8,7 @@
   "runtime~main.js.map": "/pomodoro-timer/static/js/runtime~main.0658e00c.js.map",
   "static/css/main.767c59f1.chunk.css.map": "/pomodoro-timer/static/css/main.767c59f1.chunk.css.map",
   "static/media/alarm.mp3": "/pomodoro-timer/static/media/alarm.4b9995ee.mp3",
-  "static/media/pomodoroApp.css": "/pomodoro-timer/static/media/digital-webfont.5b0f802e.woff",
+  "static/media/pomodoroApp.css": "/pomodoro-timer/static/media/digital-webfont.1edd89f1.woff2",
   "index.html": "/pomodoro-timer/index.html",
   "precache-manifest.0a0cd82214912b27f6a2cc356e278f85.js": "/pomodoro-timer/precache-manifest.0a0cd82214912b27f6a2cc356e278f85.js",
   "service-worker.js": "/pomodoro-timer/service-worker.js"
