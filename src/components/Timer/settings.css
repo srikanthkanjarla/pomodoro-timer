@@ -10,6 +10,7 @@
   margin-left: 15px;
   font-size: 18px;
   width: 100%;
+  color: #005555;
 }
 
 .settings label {
@@ -111,10 +112,14 @@
   padding-top: 20px;
 }
 
-@media (min-width: 320px) and (max-width: 480px) {
+@media screen and (max-width: 700px) {
   .settings {
-    flex-flow: column wrap;
-    align-items: center;
+    padding: 0;
+    align-items: flex-start;
+  }
+  .input-control {
+    text-align: left;
+    padding: 12px;
   }
   .settings h2 {
     margin: 8px;

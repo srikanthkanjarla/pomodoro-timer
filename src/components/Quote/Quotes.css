@@ -47,22 +47,22 @@
   content: "-- ";
 }
 
-@media (min-width: 320px) and (max-width: 480px) {
-  .quote {
-    width: 100%;
+@media screen and (max-width: 700px) {
+  .quote-container {
     height: auto;
-    margin: 0 10px;
-    padding: 0 5px;
+    margin: 0 5px;
+    padding: 10px;
   }
-  .quote p {
+  .quote-text {
     padding: 0;
-    font-size: 18px;
-    margin: 0;
   }
-  .quote p:before,
-  .quote p:after {
-    font-size: 25px;
-    padding: 0 5px;
-    margin: 10px 0 0 0;
+  .quote-author {
+    padding: 10px 0;
+  }
+  .quotation-mark {
+    font-size: 35px;
+  }
+  .quotation-mark {
+    display: none;
   }
 }

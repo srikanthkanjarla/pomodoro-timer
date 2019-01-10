@@ -78,7 +78,6 @@ function PomodoroTimerSettings(props) {
           </div>
         </label>
       </div>
-      <hr />
       <div className="input-control alaram-sound">
         <label htmlFor="sounds">
           <input type="checkbox" id="sounds" name="alaramsounds" checked={isAlarmON} onChange={toggleAlarmSound} />
