@@ -5,13 +5,13 @@ import Button from './Button';
 function ClockControls(props) {
   const { isTimerRunning, onStart, onStop, onReset } = props;
   return (
-    <div className="btn-controls">
+    <div className="button-controls">
       {isTimerRunning ? (
-        <Button name="stop" value="Pause" className="btn btn-stop" onClick={onStop} />
+        <Button name="stop" value="Pause" className="btn" onClick={onStop} />
       ) : (
-        <Button name="start" value="Start" className="btn btn-start" onClick={onStart} />
+        <Button name="start" value="Start" className="btn" onClick={onStart} />
       )}
-      <Button name="reset" value="Reset" className="btn btn-reset" onClick={onReset} />
+      <Button name="reset" value="Reset" className="btn" onClick={onReset} />
     </div>
   );
 }

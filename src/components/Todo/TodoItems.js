@@ -8,19 +8,21 @@ function TodoItems(props) {
     // render all todo items
     <ul className="todo-items">
       {tasks.length ? (
-        tasks.map(task => (
-          <Task
-            key={task.id}
-            id={task.id}
-            completed={task.completed}
-            text={task.text}
-            toggleTodo={toggleTodo}
-            deleteTodo={deleteTodo}
-            setNotifications={setNotifications}
-          />
-        ))
+        <ul>
+          {tasks.map(task => (
+            <Task
+              key={task.id}
+              id={task.id}
+              completed={task.completed}
+              text={task.text}
+              toggleTodo={toggleTodo}
+              deleteTodo={deleteTodo}
+              setNotifications={setNotifications}
+            />
+          ))}
+        </ul>
       ) : (
-        <li className="no-tasks">No tasks found</li>
+        <p className="no-tasks">Your Task list is empty</p>
       )}
     </ul>
   );

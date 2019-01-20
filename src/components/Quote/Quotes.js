@@ -29,14 +29,12 @@ function Quotes(props) {
     getJsonp(END_POINT, callbackMethodName);
   }
   return (
-    <div className="quote-container" style={isBreakTime ? { color: '#3066be' } : {}}>
+    <div className="quote-container">
       {isBreakTime ? (
         <h2>It&apos;s ok to take a break</h2>
       ) : (
         <div>
-          <p className="left quotation-mark">&ldquo;</p>
           <p className="quote-text">{quoteText}</p>
-          <p className="right quotation-mark">&rdquo;</p>
           <p className="quote-author">{quoteAuthor}</p>
         </div>
       )}

@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 function TodoFilterLinks(props) {
   const { filter, setFilter } = props;
-  const style = { background: '#005555', color: '#ffffff' };
+  const style = { background: 'var(--ABSOLUTE-ZERO)', color: '#ffffff' };
   return (
     <p className="todo-filter">
       <input

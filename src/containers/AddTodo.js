@@ -8,41 +8,43 @@ const dbPromise = dBConnection();
 function AddTodo(props) {
   const { id, text, inputChange, submitForm, addNotification } = props;
   return (
-    <form
-      onSubmit={e => {
-        e.preventDefault();
-        if (!text.trim()) {
-          return;
-        }
-        // add todo to Redux store
-        submitForm(text);
-        // add todo to indexedDB
-        dbPromise
-          .then(db => {
-            const tx = db.transaction('todoStore', 'readwrite');
-            const store = tx.objectStore('todoStore');
-            store.add({ id, text, completed: false });
-            return tx.complete;
-          })
-          .then(() => {
-            // add notification message
-            addNotification('Added to your list');
-          });
-      }}
-      className="todo-form"
-    >
-      <input
-        type="text"
-        value={text}
-        name="todo"
-        id="add-todo"
-        placeholder="New task ..."
-        className="todo-input"
-        aria-label="add new task"
-        onChange={event => inputChange(event.target.value)}
-      />
-      <input type="submit" name="add-todo" value="Add" className="btn-add-todo" />
-    </form>
+    <div className="add-todo">
+      <form
+        onSubmit={e => {
+          e.preventDefault();
+          if (!text.trim()) {
+            return;
+          }
+          // add todo to Redux store
+          submitForm(text);
+          // add todo to indexedDB
+          dbPromise
+            .then(db => {
+              const tx = db.transaction('todoStore', 'readwrite');
+              const store = tx.objectStore('todoStore');
+              store.add({ id, text, completed: false });
+              return tx.complete;
+            })
+            .then(() => {
+              // add notification message
+              addNotification('Added to your list');
+            });
+        }}
+        className="todo-form"
+      >
+        <input
+          type="text"
+          value={text}
+          name="todo"
+          id="add-todo"
+          placeholder="New task ..."
+          className="todo-input"
+          aria-label="add new task"
+          onChange={event => inputChange(event.target.value)}
+        />
+        <input type="submit" name="add-todo" value="Add" className="btn-add-todo" />
+      </form>
+    </div>
   );
 }
 

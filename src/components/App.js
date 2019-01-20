@@ -8,10 +8,15 @@ import './App.css';
 
 function App() {
   return (
-    <div className="container">
-      <Header />
-      <Quotes />
-      <PomodoroTimer />
+    <div>
+      <div className="container">
+        <Header />
+        <div className="content">
+          <Quotes />
+          <PomodoroTimer />
+        </div>
+      </div>
+
       <TodoApp />
     </div>
   );

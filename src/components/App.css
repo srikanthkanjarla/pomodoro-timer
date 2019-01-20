@@ -1,21 +1,38 @@
 @import url("https://fonts.googleapis.com/css?family=Orbitron|Roboto|Text+Me+One");
+:root {
+  --BRANDEIS-BLUE: #0c5ee8;
+  --NATIONS-BLUE: #538cec;
+  --ABSOLUTE-ZERO: #0949b5;
+  --GAMBOGE: #eba10c;
+  --VIVID-SKY-BLUE: #00dcf5;
+  --VIVID-CERULEAN: #00a2ff;
+  --WHITE: #ffffff;
+}
+
 body {
-    padding: 0;
-    background: #f4f3ea;
-    color: #41463d;
-    font-family: "Roboto", sans-serif;
+  padding: 0;
+  margin: 0;
+  font-family: "Roboto", sans-serif;
 }
 
 .container {
-    display: flex;
-    flex-flow: row wrap;
+  height: 90vh;
+  background-color: var(--VIVID-SKY-BLUE);
+  background: linear-gradient(
+    45deg,
+    var(--VIVID-CERULEAN),
+    var(--ABSOLUTE-ZERO)
+  );
+  display: flex;
+  flex-flow: column;
+}
+
+.content {
+  display: flex;
 }
 
 @media screen and (max-width: 700px) {
-    body {
-        background-color: #ffffff;
-    }
-    .container {
-        flex-flow: column;
-    }
+  .container {
+    flex-flow: column;
+  }
 }

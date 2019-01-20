@@ -50,7 +50,7 @@ function Task(props) {
           checked={completed}
           onChange={() => toggleTodoTask(id, text, completed, toggleTodo, setNotifications)}
         />
-        <span />
+        <span className="custom-checkbox" />
       </label>
       {text}
       <button type="button" className="remove-btn" onClick={() => deleteTodoTask(id, deleteTodo, setNotifications)}>

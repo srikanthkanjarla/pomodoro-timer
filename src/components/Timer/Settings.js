@@ -21,7 +21,7 @@ function PomodoroTimerSettings(props) {
   const { updateSessionLength, updateBreakLength, toggleAlarmSound, toggleAutoStart } = props;
   return (
     <div className="settings">
-      <h2>settings</h2>
+      <h2>Timer Settings</h2>
       <div className="input-control">
         <label htmlFor="session">
           Session Length
@@ -89,7 +89,7 @@ function PomodoroTimerSettings(props) {
         <label htmlFor="auto-start">
           <input type="checkbox" id="auto-start" name="autostart" checked={isAutoStartON} onChange={toggleAutoStart} />
           <span className="custom-checkbox" />
-          Auto start session
+          Auto start
         </label>
       </div>
     </div>

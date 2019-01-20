@@ -1,49 +1,32 @@
-.btn {
-    padding: 10px 0;
-    min-width: 90px;
-    margin: 10px;
-    outline: none;
-    border-radius: 8px;
-    border: 1px solid transparent;
-    cursor: pointer;
-    transition: all 2ms ease;
-    font-size: 18px;
-    font-family: "Roboto", sans-serif;
-    background-color: #e5e5e5;
-}
+ .button-controls {
+     margin-top: 30px;
+     display: flex;
+     justify-content: space-evenly;
+     align-items: center;
+ }
 
-.btn-start {
-    box-shadow: 0 0 1px 1px #6dc9dd;
-}
+ .btn {
+     padding: 13px 0;
+     min-width: 100px;
+     margin: 0 10px;
+     border: 0;
+     background-color: var(--ABSOLUTE-ZERO);
+     color: #ffffff;
+     border-radius: 4px;
+     font-family: "Roboto", sans-serif;
+     font-size: 1rem;
+ }
 
-.btn-start:hover {
-    box-shadow: 0 0 2px 2px #6dc9dd;
-}
+ .btn:hover {
+     background-color: var(--BRANDEIS-BLUE);
+ }
 
-.btn-start:active {
-    background: linear-gradient(#f4f3ea, #6dc9dd);
-}
+ .btn:active {
+     transform: scale(1.15);
+ }
 
-.btn-stop {
-    box-shadow: 0 0 1px 1px #d36582;
-}
+ .btn:focus {
+     outline-color: var(--VIVID-SKY-BLUE);
+ }
 
-.btn-stop:hover {
-    box-shadow: 0 0 2px 2px #d35682;
-}
-
-.btn-stop:active {
-    background: linear-gradient(#f4f3ea, #d36582);
-}
-
-.btn-reset {
-    box-shadow: 0 0 1px 1px #b8cdf8;
-}
-
-.btn-reset:hover {
-    box-shadow: 0 0 2px 2px #b8cdf8;
-}
-
-.btn-reset:active {
-    background: linear-gradient(#f4f3ea, #becdf8);
-}
+ @media screen and (max-width: 700px) {}

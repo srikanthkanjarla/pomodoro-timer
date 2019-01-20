@@ -5,57 +5,61 @@
     font-style: normal;
 }
 
-.timer-container {
-    flex: 1.4;
-    border-radius: 15px;
-    box-shadow: 0 0 1px 2px rgba(102, 51, 153, 0.4);
-    padding: 40px 0 0 0;
+.pomodoro-container {
+    flex: 1.5;
     display: flex;
-    flex-flow: column wrap;
-    align-items: center;
-    justify-content: center;
-    margin: 0 10px;
-}
-
-.timer {
-    display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
     align-items: center;
 }
 
-.clock {
-    height: 200px;
-    width: 200px;
+.clock-ring-one {
+    height: 290px;
+    width: 290px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    box-shadow: 0 0 1px 1px hsla(202, 100%, 50%, 0.2);
+    margin: 0 auto;
+}
+
+.clock-ring-two {
+    height: 245px;
+    width: 245px;
+    border: 2px solid hsla(202, 100%, 50%, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+}
+
+.clock-ring-three {
+    height: 220px;
+    width: 220px;
+    border: 2.5px solid var(--VIVID-CERULEAN);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.clock-time {
+    letter-spacing: 5px;
+    font-size: 3rem;
+    color: #fff;
+    box-shadow: 0 0 1px 1px hsla(202, 100%, 50%, 0.2);
+    height: 180px;
+    width: 180px;
     border-radius: 50%;
     display: flex;
     justify-content: center;
     align-items: center;
     font-family: "digital", Arial, Helvetica, sans-serif;
-    letter-spacing: 5px;
-    font-size: 45px;
-    font-weight: bold;
-    margin: 15px;
 }
 
-.session {
-    box-shadow: 0 0 5px 10px hsl(180, 100%, 17%), 0 0 10px 5px hsla(180, 100%, 17%, 0.7);
-    border: 4px solid hsla(180, 100%, 17%, 0.6);
-}
-
-.break {
-    box-shadow: 0 0 5px 10px hsl(217, 60%, 47%), 0 0 10px 5px hsla(217, 60%, 47%, 0.7);
-    border: 4px solid hsl(217, 60%, 47%, 0.6);
-}
-
-@media screen and (max-width: 700px) {
-    .clock {
-        flex-flow: column wrap;
-    }
-    .timer-container {
-        box-shadow: none;
-        margin: 0;
-    }
-    .timer {
-        flex-flow: column wrap;
-    }
+.button-controls {
+    margin-top: 30px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
 }

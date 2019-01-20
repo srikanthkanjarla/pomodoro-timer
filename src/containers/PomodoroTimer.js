@@ -9,6 +9,7 @@ const mapStateToProps = state => ({
   isTimerPaused: state.timer.isTimerPaused,
   isBreakTime: state.timer.isBreakTime,
   isAutoStartON: state.timer.isAutoStartON,
+  isisAlarmON: state.timer.isAlarmON,
 });
 
 const mapDispatchToProps = dispatch => ({

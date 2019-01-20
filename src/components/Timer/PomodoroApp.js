@@ -14,7 +14,15 @@ class PomodoroTimer extends React.Component {
 
   componentDidUpdate(prevProps) {
     const currentProps = this.props;
-    const { secondsElapsed, clockTime, isBreakTime, isAutoStartON, resetTimer, autoStartTimer } = currentProps;
+    const {
+      secondsElapsed,
+      clockTime,
+      isBreakTime,
+      isAutoStartON,
+      resetTimer,
+      autoStartTimer,
+      isAlarmON,
+    } = currentProps;
 
     // start timer
     // TODO - use Date object based timer than setInterval
@@ -31,13 +39,17 @@ class PomodoroTimer extends React.Component {
 
     // start break time, play alarm sound
     if (secondsElapsed === clockTime && !isBreakTime) {
-      this.alarmRef.current.play();
+      if (isAlarmON) {
+        this.alarmRef.current.play();
+      }
       currentProps.startBreak();
     }
 
     // after break time reset or restart timer, play alarm sound
     if (secondsElapsed === clockTime && isBreakTime) {
-      this.alarmRef.current.play();
+      if (isAlarmON) {
+        this.alarmRef.current.play();
+      }
       resetTimer();
       if (isAutoStartON) {
         autoStartTimer();
@@ -55,8 +67,8 @@ class PomodoroTimer extends React.Component {
     const { clockTime, secondsElapsed, isTimerRunning, isTimerPaused, isBreakTime } = this.props;
     const { startTimer, stopTimer, resetTimer } = this.props;
     return (
-      <div className="timer-container">
-        <div className="timer">
+      <div className="pomodoro-container">
+        <div className="clock">
           <Clock
             clockTime={clockTime}
             secondsElapsed={secondsElapsed}
