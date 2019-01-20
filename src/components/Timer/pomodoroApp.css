@@ -63,3 +63,13 @@
     justify-content: space-evenly;
     align-items: center;
 }
+
+@media screen and (max-width: 700px) {
+    .pomodoro-container {
+        display: block;
+    }
+    .button-controls {
+        padding-bottom: 1rem;
+        margin-top: 1rem;
+    }
+}

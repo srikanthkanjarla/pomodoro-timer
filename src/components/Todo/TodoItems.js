@@ -6,7 +6,7 @@ function TodoItems(props) {
   const { tasks, toggleTodo, deleteTodo, setNotifications } = props;
   return (
     // render all todo items
-    <ul className="todo-items">
+    <div className="todo-items">
       {tasks.length ? (
         <ul>
           {tasks.map(task => (
@@ -24,7 +24,7 @@ function TodoItems(props) {
       ) : (
         <p className="no-tasks">Your Task list is empty</p>
       )}
-    </ul>
+    </div>
   );
 }
 TodoItems.propTypes = {

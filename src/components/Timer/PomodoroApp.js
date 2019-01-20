@@ -23,7 +23,6 @@ class PomodoroTimer extends React.Component {
       autoStartTimer,
       isAlarmON,
     } = currentProps;
-
     // start timer
     // TODO - use Date object based timer than setInterval
     if (currentProps.isTimerRunning && !prevProps.isTimerRunning) {

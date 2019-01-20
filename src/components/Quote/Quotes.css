@@ -1,47 +1,38 @@
 .quote-container {
-  flex: 1;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex: 1;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  font-size: 1.5rem;
-  padding: 0 0.5rem;
-  color: var(--WHITE);
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0 0.5rem;
+    color: var(--WHITE);
 }
 
 .quote-text {
-  font-size: 1.5rem;
-  color: #eeeeee;
-  text-align: center;
-  padding: 0 3rem;
-  font-family: "Text Me One", sans-serif;
+    font-size: 1.5rem;
+    color: #eeeeee;
+    text-align: center;
+    padding: 0 3rem;
+    font-family: "Text Me One", sans-serif;
+}
+
+.quote-text::first-letter {
+    font-weight: bold;
 }
 
 .quote-author {
-  font-size: 1rem;
-  color: var(--GAMBOGE);
+    font-size: 1rem;
+    color: var(--GAMBOGE);
 }
 
 @media screen and (max-width: 700px) {
-  .quote-container {
-    height: auto;
-    margin: 10px;
-    padding-top: 10px;
-  }
-  .quote-text {
-    padding: 0;
-  }
-  .quote-author {
-    padding: 10px 0;
-  }
-  .quotation-mark {
-    font-size: 35px;
-  }
-  .quotation-mark {
-    display: none;
-  }
+    .quote-container {
+        margin: 0;
+        padding: 0;
+        font-size: 1rem;
+    }
+    .quote-text {
+        font-size: 1.1rem;
+        padding: 0 0.3rem;
+    }
 }

@@ -11,7 +11,6 @@
     padding: 1.2rem 0;
     background-color: #ffffff;
     width: 45vw;
-    border-radius: 0.2rem;
     text-align: center;
     color: var(--ABSOLUTE-ZERO);
 }
@@ -27,6 +26,8 @@
     margin: 0 0.3rem;
     width: 60%;
     border: 0.06rem solid var(--ABSOLUTE-ZERO);
+    font-size: 1.1rem;
+    color: var(--ABSOLUTE-ZERO);
 }
 
 .add-todo form input[type="text"]:focus {
@@ -70,7 +71,7 @@
     margin: 0.4rem;
     padding: 0.7rem;
     width: 80%;
-    box-shadow: 0 -0.01rem 0.01rem 0 var(--ABSOLUTE-ZERO);
+    /* box-shadow: 0 -0.01rem 0.01rem 0 var(--ABSOLUTE-ZERO); */
 }
 
 .todo-items li:hover {
@@ -144,4 +145,27 @@
     align-items: center;
     padding-top: 3rem;
     font-size: 1.2rem;
+}
+
+@media screen and (max-width: 700px) {
+    .todo-container {
+        padding: 0;
+        width: auto;
+    }
+    .todo-container h1 {
+        position: static;
+        width: auto;
+        font-size: 1.5rem;
+    }
+    .todo-items ul {
+        margin: 0;
+        padding: 0;
+    }
+    .todo-items li {
+        list-style-type: none;
+        font-size: 1rem;
+        margin: 0.4rem;
+        padding: 0.5rem;
+        width: auto;
+    }
 }

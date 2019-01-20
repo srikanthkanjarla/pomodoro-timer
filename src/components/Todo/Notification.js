@@ -13,7 +13,7 @@ function Notifications(props) {
       {notifications.map(message => {
         // remove notification after 4 seconds
         timeOutId = setTimeout(() => {
-          removeNotification(message.id);          
+          removeNotification(message.id);
         }, 4000);
         // render notification message
         return (

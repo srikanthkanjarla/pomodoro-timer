@@ -18,7 +18,7 @@ function toggleTodoTask(id, text, completed, toggleTask, setNotifications) {
     })
     // set notifcation message
     .then(() => {
-      setNotifications(completed ? 'Marked as Complete' : 'Marked as Active');
+      setNotifications(completed ? 'Task Marked as Active' : 'Task Marked as Complete');
     });
 }
 // delete todo task
@@ -51,8 +51,8 @@ function Task(props) {
           onChange={() => toggleTodoTask(id, text, completed, toggleTodo, setNotifications)}
         />
         <span className="custom-checkbox" />
+        {text}
       </label>
-      {text}
       <button type="button" className="remove-btn" onClick={() => deleteTodoTask(id, deleteTodo, setNotifications)}>
         X
       </button>
