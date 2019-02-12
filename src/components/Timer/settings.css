@@ -73,7 +73,7 @@
     height: 1.6rem;
     width: 1.6rem;
     margin-right: 0.9rem;
-    border: 1px solid var(--BRANDEIS-BLUE);
+    border: 1px solid var(--NATIONS-BLUE);
     border-radius: 3px;
     cursor: pointer;
     position: relative;
@@ -87,7 +87,6 @@
 }
 
 .settings input[type="checkbox"]:checked+.custom-checkbox {
-    /* background-color: var(--ABSOLUTE-ZERO); */
     background-color: var(--BRANDEIS-BLUE);
     box-shadow: none;
 }
