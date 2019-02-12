@@ -7,3 +7,5 @@ traditionally 25 minutes in length, separated by short breaks
 To-Do
 
 Todo list application allows users to manage their tasks
+
+I have used React JS, Redux and IndexedDB in this project
