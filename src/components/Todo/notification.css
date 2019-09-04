@@ -1,7 +1,7 @@
 .notifications {
   position: absolute;
   left: 0.2rem;
-  top: 3rem;
+  bottom: 0.5rem;
 }
 
 .show-msg {
