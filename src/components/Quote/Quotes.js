@@ -1,45 +1,43 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import breakTimeQuotes from './BreakTimeQuotes';
+import getJSONP, { callbackMethodName } from './QuotesAPI';
 import './Quotes.css';
 
-// JSONP to get quote from API
-const randomNum = Math.round(10000 * Math.random());
-const callbackMethodName = `cb_${randomNum}`;
-const END_POINT = 'https://api.forismatic.com/api/1.0/?method=getQuote&key=457653&format=jsonp&lang=en&jsonp=';
+let randomBreakTimeQuote = '';
 
-// JSONP function to get data from API
-function getJsonp(url, callback) {
-  const script = document.createElement('script');
-  script.id = `script_${callbackMethodName}`;
-  script.src = url + callback;
-  document.body.appendChild(script);
-  document.getElementById(script.id).remove();
-}
-
-getJsonp(END_POINT, callbackMethodName);
-
-function Quotes(props) {
-  const { isBreakTime, quoteText, quoteAuthor, secondsElapsed, updateQuote } = props;
-  // JSONP callback function
-  window[callbackMethodName] = data => {
-    updateQuote({ text: data.quoteText, author: data.quoteAuthor });
-  };
-  // get new quote after break
-  if (secondsElapsed === 0 && isBreakTime) {
-    getJsonp(END_POINT, callbackMethodName);
+// Quotes component
+class Quotes extends React.Component {
+  componentDidMount() {
+    getJSONP();
   }
-  return (
-    <div className="quote-container">
-      {isBreakTime ? (
-        <h2>It&apos;s ok to take a break</h2>
-      ) : (
-        <div>
-          <p className="quote-text">{quoteText}</p>
-          <p className="quote-author">{quoteAuthor}</p>
-        </div>
-      )}
-    </div>
-  );
+
+  render() {
+    const { isBreakTime, quoteText, quoteAuthor, secondsElapsed, updateQuote } = this.props;
+    // JSONP callback function
+    window[callbackMethodName] = data => {
+      updateQuote({ text: data.quoteText, author: data.quoteAuthor });
+    };
+    // get a new quote after the break time
+    if (secondsElapsed === 0 && isBreakTime) {
+      getJSONP();
+      // random key to read a quote from BreakTimeQuotes
+      randomBreakTimeQuote = breakTimeQuotes[Math.floor(Math.random() * breakTimeQuotes.length)];
+    }
+
+    return (
+      <div className="quote-container">
+        {isBreakTime ? (
+          <h2>{randomBreakTimeQuote}</h2>
+        ) : (
+          <div>
+            <p className="quote-text">{quoteText}</p>
+            <p className="quote-author">{quoteAuthor}</p>
+          </div>
+        )}
+      </div>
+    );
+  }
 }
 Quotes.propTypes = {
   isBreakTime: PropTypes.bool.isRequired,
