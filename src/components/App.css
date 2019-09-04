@@ -1,39 +1,43 @@
 @import url("https://fonts.googleapis.com/css?family=Orbitron|Roboto|Text+Me+One");
 :root {
-    --BRANDEIS-BLUE: #0c5ee8;
-    --NATIONS-BLUE: #538cec;
-    --ABSOLUTE-ZERO: #0949b5;
-    --GAMBOGE: #eba10c;
-    --VIVID-SKY-BLUE: #00dcf5;
-    --VIVID-CERULEAN: #00a2ff;
-    --WHITE: #ffffff;
+  --BRANDEIS-BLUE: #0c5ee8;
+  --NATIONS-BLUE: #538cec;
+  --ABSOLUTE-ZERO: #0949b5;
+  --GAMBOGE: #eba10c;
+  --VIVID-SKY-BLUE: #00dcf5;
+  --VIVID-CERULEAN: #00a2ff;
+  --WHITE: #ffffff;
 }
 
 body {
-    padding: 0;
-    margin: 0;
-    font-family: "Roboto", sans-serif;
+  padding: 0;
+  margin: 0;
+  font-family: "Roboto", sans-serif;
 }
 
 .container {
-    height: 90vh;
-    padding-left: 6rem;
-    background-color: var(--VIVID-SKY-BLUE);
-    background: linear-gradient( 45deg, var(--VIVID-CERULEAN), var(--ABSOLUTE-ZERO));
-    display: flex;
-    flex-flow: column;
+  height: 90vh;
+  padding-left: 6rem;
+  background-color: var(--VIVID-SKY-BLUE);
+  background: linear-gradient(
+    180deg,
+    var(--ABSOLUTE-ZERO),
+    var(--VIVID-CERULEAN)
+  );
+  display: flex;
+  flex-flow: column;
 }
 
 .content {
-    display: flex;
+  display: flex;
 }
 
 @media screen and (max-width: 700px) {
-    .content {
-        display: block;
-    }
-    .container {
-        height: auto;
-        padding: 0;
-    }
+  .content {
+    display: block;
+  }
+  .container {
+    height: auto;
+    padding: 0;
+  }
 }

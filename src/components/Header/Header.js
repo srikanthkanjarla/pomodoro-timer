@@ -3,9 +3,9 @@ import './Header.css';
 
 function Header() {
   return (
-    <div className="header">
+    <header className="header">
       <h1>Pomodoro Timer</h1>
-    </div>
+    </header>
   );
 }
 export default Header;

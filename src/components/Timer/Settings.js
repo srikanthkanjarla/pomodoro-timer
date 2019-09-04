@@ -28,10 +28,11 @@ function PomodoroTimerSettings(props) {
           <div className="input-group">
             <input
               type="button"
-              name="step-up-session"
-              value="+"
-              onClick={() => hadleSessionLength(sessionLength + 1, updateSessionLength)}
+              name="step-down-session"
+              value="-"
+              onClick={() => hadleSessionLength(sessionLength - 1, updateSessionLength)}
             />
+
             <input
               type="number"
               id="session"
@@ -41,11 +42,12 @@ function PomodoroTimerSettings(props) {
               name="session-length"
               onChange={event => hadleSessionLength(event.target.value, updateSessionLength)}
             />
+
             <input
               type="button"
-              name="step-down-session"
-              value="-"
-              onClick={() => hadleSessionLength(sessionLength - 1, updateSessionLength)}
+              name="step-up-session"
+              value="+"
+              onClick={() => hadleSessionLength(sessionLength + 1, updateSessionLength)}
             />
           </div>
         </label>
@@ -56,9 +58,9 @@ function PomodoroTimerSettings(props) {
           <div className="input-group">
             <input
               type="button"
-              name="step-up-break"
-              value="+"
-              onClick={() => hadleBreakLength(breakLength + 1, updateBreakLength)}
+              name="step-down-break"
+              value="-"
+              onClick={() => hadleBreakLength(breakLength - 1, updateBreakLength)}
             />
             <input
               type="number"
@@ -71,9 +73,9 @@ function PomodoroTimerSettings(props) {
             />
             <input
               type="button"
-              name="step-down-break"
-              value="-"
-              onClick={() => hadleBreakLength(breakLength - 1, updateBreakLength)}
+              name="step-up-break"
+              value="+"
+              onClick={() => hadleBreakLength(breakLength + 1, updateBreakLength)}
             />
           </div>
         </label>
@@ -82,14 +84,14 @@ function PomodoroTimerSettings(props) {
         <label htmlFor="sounds">
           <input type="checkbox" id="sounds" name="alaramsounds" checked={isAlarmON} onChange={toggleAlarmSound} />
           <span className="custom-checkbox" />
-          Alarm Sound
+          Sound
         </label>
       </div>
       <div className="input-control auto-start">
         <label htmlFor="auto-start">
           <input type="checkbox" id="auto-start" name="autostart" checked={isAutoStartON} onChange={toggleAutoStart} />
           <span className="custom-checkbox" />
-          Auto start
+          Repeat Timer
         </label>
       </div>
     </div>

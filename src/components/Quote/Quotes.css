@@ -1,39 +1,49 @@
 .quote-container {
-    flex: 1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 0 0.5rem;
-    color: var(--WHITE);
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 0.5rem;
+  color: var(--WHITE);
 }
 
 .quote-text {
-    font-size: 1.5rem;
-    color: #eeeeee;
-    padding: 0 3rem;
-    font-family: "Text Me One", sans-serif;
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: #f7f7ff;
+  padding: 0 3rem;
+  font-family: "Text Me One", sans-serif;
 }
 
 .quote-text::first-letter {
-    font-weight: bold;
+  font-weight: bold;
+  font-size: 1.8rem;
 }
 
 .quote-author {
-    font-size: 1.2rem;
-    color: var(--GAMBOGE);
-    text-align: center;
+  font-size: 1.2rem;
+  color: #fffccc;
+  font-weight: 800;
+  text-align: center;
+}
+.quote-author::before {
+  content: "--";
+  margin-right: 0.3rem;
 }
 
 @media screen and (max-width: 700px) {
-    .quote-container {
-        margin: 0;
-        padding: 0;
-        font-size: 1rem;
-        padding: 0 0.5rem;
-        text-align: center;
-    }
-    .quote-text {
-        font-size: 1.1rem;
-        padding: 0 0.3rem;
-    }
+  .quote-container {
+    margin: 0;
+    padding: 0;
+    font-size: 1rem;
+    padding: 0 0.5rem;
+    text-align: center;
+  }
+  .quote-text {
+    font-size: 1.1rem;
+    padding: 0 0.3rem;
+  }
+  .quote-author {
+    font-size: 1rem;
+  }
 }
